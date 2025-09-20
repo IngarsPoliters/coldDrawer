@@ -16,4 +16,4 @@ cmds = [
 ]
 
 [start]
-cmd = "echo 'Static site generated successfully'"
+cmd = "cd apps/web && npx --yes serve -s dist -l 3000"
