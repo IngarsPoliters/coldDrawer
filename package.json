@@ -1,0 +1,28 @@
+{
+  "name": "coldDrawer",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "type-check": "turbo type-check",
+    "clean": "turbo clean",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "contracts:deploy": "pnpm --filter contracts deploy",
+    "contracts:test": "pnpm --filter contracts test",
+    "web:dev": "pnpm --filter web dev",
+    "services:dev": "turbo dev --filter=watcher --filter=indexer",
+    "integration:test": "node scripts/integration-test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "prettier": "^3.1.0",
+    "turbo": "^1.11.0",
+    "typescript": "^5.3.0"
+  }
+}
