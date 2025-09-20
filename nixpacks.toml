@@ -8,12 +8,12 @@ nixPkgs = ["nodejs_22"]
 [phases.install]
 cmds = [
   "npm install -g pnpm@8.15.0",
-  "pnpm install --frozen-lockfile"
+  "export PATH=$PATH:/usr/local/bin && pnpm install --frozen-lockfile"
 ]
 
 [phases.build]
 cmds = [
-  "cd apps/web && pnpm build"
+  "export PATH=$PATH:/usr/local/bin && cd apps/web && pnpm build"
 ]
 
 [start]
