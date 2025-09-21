@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { PortfolioGrid } from "@/components/portfolio/PortfolioGrid"
+import { CategoryOverview } from "@/components/portfolio/CategoryOverview"
 import { AssetDetails } from "@/components/asset/AssetDetails"
 import { useAppStore } from "@/stores/appStore"
 import { useWalletConnected } from "@/stores/walletStore"
@@ -7,12 +8,12 @@ import { apiClient } from "@/lib/api"
 import { Asset, AssetEvent } from "@coldDrawer/shared"
 import { Button } from "@/components/ui/Button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card"
-import { Wallet } from "lucide-react"
+import { Wallet, Grid3X3, BarChart3 } from "lucide-react"
 
-type View = 'grid' | 'details'
+type View = 'overview' | 'grid' | 'details'
 
 export function Portfolio() {
-  const [currentView, setCurrentView] = useState<View>('grid')
+  const [currentView, setCurrentView] = useState<View>('overview')
   const [selectedAsset, setSelectedAsset] = useState<Asset | null>(null)
   const [assetEvents, setAssetEvents] = useState<AssetEvent[]>([])
   
@@ -128,11 +129,38 @@ export function Portfolio() {
   }
 
   return (
-    <PortfolioGrid
-      onViewAsset={handleViewAsset}
-      onSellAsset={handleSellAsset}
-      onTransferAsset={handleTransferAsset}
-      onMintAsset={handleMintAsset}
-    />
+    <div className="space-y-6">
+      {/* View Toggle */}
+      <div className="flex items-center gap-2 border-b">
+        <Button
+          variant={currentView === 'overview' ? 'default' : 'ghost'}
+          onClick={() => setCurrentView('overview')}
+          className="gap-2"
+        >
+          <BarChart3 className="h-4 w-4" />
+          Overview
+        </Button>
+        <Button
+          variant={currentView === 'grid' ? 'default' : 'ghost'}
+          onClick={() => setCurrentView('grid')}
+          className="gap-2"
+        >
+          <Grid3X3 className="h-4 w-4" />
+          Assets
+        </Button>
+      </div>
+
+      {/* Content */}
+      {currentView === 'overview' ? (
+        <CategoryOverview />
+      ) : (
+        <PortfolioGrid
+          onViewAsset={handleViewAsset}
+          onSellAsset={handleSellAsset}
+          onTransferAsset={handleTransferAsset}
+          onMintAsset={handleMintAsset}
+        />
+      )}
+    </div>
   )
 }

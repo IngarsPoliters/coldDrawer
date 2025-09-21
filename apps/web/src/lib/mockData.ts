@@ -87,6 +87,112 @@ export const mockAssets: Asset[] = [
     frozen: false,
     createdAt: 1703260800,
     updatedAt: 1703347200
+  },
+  {
+    tokenId: "5",
+    chainId: "80002",
+    category: "vehicle",
+    title: "2020 BMW X5",
+    identifiers: {
+      vin: "5UXCR6C06L9B12345",
+      plate: "BMW-X5"
+    },
+    attributes: {
+      make: "BMW",
+      model: "X5",
+      year: 2020,
+      color: "Alpine White"
+    },
+    status: "owned",
+    ownerAddress: "0x742d35Cc6635C0532925a3b8D598C1F2db5C23dE",
+    note: "Premium package, panoramic sunroof",
+    frozen: false,
+    createdAt: 1703347200,
+    updatedAt: 1703347200
+  },
+  {
+    tokenId: "6",
+    chainId: "80002",
+    category: "property",
+    title: "Beach House Malibu",
+    identifiers: {
+      address: "21500 Pacific Coast Hwy, Malibu, CA"
+    },
+    attributes: {
+      type: "Single Family Home",
+      area: 2500,
+      year: 2015,
+      rooms: 4
+    },
+    status: "owned",
+    ownerAddress: "0x742d35Cc6635C0532925a3b8D598C1F2db5C23dE",
+    note: "Ocean view, private beach access, solar panels",
+    frozen: false,
+    createdAt: 1703433600,
+    updatedAt: 1703433600
+  },
+  {
+    tokenId: "7",
+    chainId: "80002",
+    category: "equipment",
+    title: "DJI Mavic 3 Pro Drone",
+    identifiers: {
+      serial: "DJ001A23B456789"
+    },
+    attributes: {
+      make: "DJI",
+      model: "Mavic 3 Pro",
+      year: 2023,
+      condition: "Like New"
+    },
+    status: "owned",
+    ownerAddress: "0x742d35Cc6635C0532925a3b8D598C1F2db5C23dE",
+    note: "Professional cinematography drone with all accessories",
+    frozen: false,
+    createdAt: 1703520000,
+    updatedAt: 1703520000
+  },
+  {
+    tokenId: "8",
+    chainId: "80002",
+    category: "equipment",
+    title: "Canon EOS R5 Camera Kit",
+    identifiers: {
+      serial: "CR5-789123456"
+    },
+    attributes: {
+      make: "Canon",
+      model: "EOS R5",
+      year: 2022,
+      megapixels: 45
+    },
+    status: "for_sale",
+    ownerAddress: "0x742d35Cc6635C0532925a3b8D598C1F2db5C23dE",
+    note: "Complete kit with 24-70mm lens, barely used",
+    frozen: false,
+    createdAt: 1703606400,
+    updatedAt: 1703606400
+  },
+  {
+    tokenId: "9",
+    chainId: "80002",
+    category: "other",
+    title: "Rare Vintage Watch Collection",
+    identifiers: {
+      collection: "Rolex-Omega-Cartier-Set"
+    },
+    attributes: {
+      count: 3,
+      era: "1980s-1990s",
+      condition: "Excellent",
+      authenticated: true
+    },
+    status: "owned",
+    ownerAddress: "0x742d35Cc6635C0532925a3b8D598C1F2db5C23dE",
+    note: "Authenticated luxury watch collection with certificates",
+    frozen: false,
+    createdAt: 1703692800,
+    updatedAt: 1703692800
   }
 ]
 

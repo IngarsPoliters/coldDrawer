@@ -5,6 +5,8 @@ import { Portfolio } from "@/pages/Portfolio"
 import { History } from "@/pages/History"
 import { Settings } from "@/pages/Settings"
 import { useAppStore } from "@/stores/appStore"
+import { mockWalletConnect } from "@/stores/walletStore"
+import { initializeMockData } from "@/lib/mockData"
 import { wsClient } from "@/lib/api"
 import "@/styles/globals.css"
 
@@ -30,6 +32,17 @@ function App() {
       setTheme('dark')
     }
   }, [setTheme])
+
+  // Initialize demo data and wallet
+  useEffect(() => {
+    // Load mock data for demonstration
+    initializeMockData()
+    
+    // Auto-connect mock wallet for demo
+    setTimeout(() => {
+      mockWalletConnect()
+    }, 1000)
+  }, [])
 
   // Initialize WebSocket connection
   useEffect(() => {
