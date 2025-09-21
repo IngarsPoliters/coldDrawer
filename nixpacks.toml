@@ -7,7 +7,7 @@ nixPkgs = ["nodejs_22"]
 
 [phases.install]
 cmds = [
-  "npx pnpm@8.15.0 install --frozen-lockfile"
+  "npx pnpm@8.15.0 install"
 ]
 
 [phases.build]
