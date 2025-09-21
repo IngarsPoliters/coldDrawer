@@ -1,6 +1,5 @@
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/Card"
 import { Button } from "@/components/ui/Button"
-import { Badge } from "@/components/ui/Badge"
 import { StatusPill } from "@/components/common/StatusPill"
 import { Asset, ASSET_CATEGORIES } from "@coldDrawer/shared"
 import { formatAddress, formatTimeAgo } from "@/lib/utils"

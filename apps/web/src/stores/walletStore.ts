@@ -55,7 +55,7 @@ const initialState: WalletState = {
 
 export const useWalletStore = create<WalletState & WalletActions>()(
   devtools(
-    (set, get) => ({
+    (set) => ({
       ...initialState,
       
       connect: (address, chainId) => set({

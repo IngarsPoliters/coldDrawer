@@ -87,7 +87,7 @@ const initialState: AppState = {
 
 export const useAppStore = create<AppState & AppActions>()(
   devtools(
-    (set, get) => ({
+    (set) => ({
       ...initialState,
       
       // UI Actions

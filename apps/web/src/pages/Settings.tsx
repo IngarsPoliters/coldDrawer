@@ -12,7 +12,7 @@ import {
   Database,
   Moon,
   Sun,
-  Refresh,
+  RefreshCw,
   Download,
   Upload,
   Copy,
@@ -236,7 +236,7 @@ export function Settings() {
                 <p className="text-xs text-muted-foreground">Reload all asset and event data</p>
               </div>
               <Button variant="outline" onClick={handleRefreshData} className="gap-2">
-                <Refresh className="h-4 w-4" />
+                <RefreshCw className="h-4 w-4" />
                 Refresh
               </Button>
             </div>

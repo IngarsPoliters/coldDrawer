@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card"
 import { Badge } from "@/components/ui/Badge"
 import { LoadingSpinner } from "@/components/common/LoadingSpinner"
@@ -132,7 +132,7 @@ export function History() {
         return `Note added to token ${event.tokenId}: "${noteEvent.note}"`
       
       default:
-        return `Event for token ${event.tokenId}`
+        return `Event for token ${(event as AssetEvent).tokenId}`
     }
   }
 
