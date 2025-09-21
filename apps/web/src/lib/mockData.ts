@@ -1,4 +1,5 @@
 import { Asset, AssetEvent } from '@coldDrawer/shared'
+import { useAppStore } from '@/stores/appStore'
 
 // Mock data for demonstration
 export const mockAssets: Asset[] = [
@@ -266,7 +267,6 @@ export const mockEvents: AssetEvent[] = [
 // Initialize mock data in stores
 export const initializeMockData = () => {
   // This would be called when the app starts if we want to show demo data
-  const { useAppStore } = require('@/stores/appStore')
   const { setAssets, setEvents, setStats } = useAppStore.getState()
   
   setAssets(mockAssets)
