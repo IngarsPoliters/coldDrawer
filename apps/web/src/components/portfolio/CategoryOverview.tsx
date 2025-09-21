@@ -6,9 +6,7 @@ import {
   Home, 
   Wrench, 
   Package,
-  TrendingUp,
-  TrendingDown,
-  Minus
+  TrendingUp
 } from "lucide-react"
 
 const categoryConfig = {
@@ -45,7 +43,7 @@ export function CategoryOverview() {
   const categories = Object.entries(categoryConfig).map(([key, config]) => {
     const assets = assetsByCategory[key] || []
     const count = assets.length
-    const value = assets.reduce((sum, asset) => {
+    const value = assets.reduce((sum) => {
       // Mock value calculation - in real app would use actual values
       const baseValue = Math.random() * 100000 + 10000
       return sum + baseValue

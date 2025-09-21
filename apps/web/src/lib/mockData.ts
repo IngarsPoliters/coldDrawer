@@ -185,7 +185,7 @@ export const mockAssets: Asset[] = [
       count: 3,
       era: "1980s-1990s",
       condition: "Excellent",
-      authenticated: true
+      authenticated: "true"
     },
     status: "owned",
     ownerAddress: "0x742d35Cc6635C0532925a3b8D598C1F2db5C23dE",
